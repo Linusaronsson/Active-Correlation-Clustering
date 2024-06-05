@@ -269,9 +269,9 @@ class ExperimentReader:
                     err_kws = {}
 
                 errorbar = ("sd", 1)
-                #cut_threshold = 1000
-                #df_filtered = df_filtered[df_filtered["x"] < cut_threshold]
-                df_filtered = df_filtered[df_filtered["x"] < (min_length + 5)]
+                cut_threshold = 500
+                df_filtered = df_filtered[df_filtered["x"] < cut_threshold]
+                #df_filtered = df_filtered[df_filtered["x"] < (min_length + 5)]
 
                 metric_map = {
                     "ami": "AMI", "rand": "ARI", "time": "Time (s)", "num_violations": "Num. violations",
@@ -304,7 +304,7 @@ class ExperimentReader:
 
                 #plt.setp(ax.lines, markeredgecolor='none')  # Removes the border of the markers
                 #plt.setp(ax.lines, alpha=0.7)  # Adjusts the transparency of the markers
-                plt.setp(ax.lines, markeredgewidth=0.5)  # Adjusts the transparency of the markers
+                plt.setp(ax.lines, markeredgewidth=0)  # Adjusts the transparency of the markers
                 #plt.setp(ax.lines, markersize=7)  # Adjusts the transparency of the markers
                 plt.setp(ax.lines, markersize=0)  # Adjusts the transparency of the markers
                 plt.gca().xaxis.set_major_locator(MaxNLocator(integer=True, nbins=5))
@@ -326,7 +326,10 @@ class ExperimentReader:
                 ax.set_xticks(ax.get_xticks().tolist()[1:])
                 ax.set_xticklabels(labels[1:])
 
-                plt.xlabel("Number of queries")
+                if prop:
+                    plt.xlabel("Number of queries")
+                else:
+                    plt.xlabel("Number of queries divided by number of edges")
                 #ax.legend(loc="best")
                 ax.legend(loc='upper left', bbox_to_anchor=(1,1))
                 plt.subplots_adjust(right=0.75)
