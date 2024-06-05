@@ -9,4 +9,4 @@ module load virtualenv/20.23.1-GCCcore-12.3.0 matplotlib/3.7.2-gfbf-2023a SciPy-
 
 source ../my_venv/bin/activate
 
-python acc/run_experiments.py --config configs/test_experiment/experiment$SLURM_ARRAY_TASK_ID.json
+python acc/run_experiments.py --config configs/acc_experiment/experiment$SLURM_ARRAY_TASK_ID.json
