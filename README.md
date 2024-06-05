@@ -1,1 +1,1 @@
-# Active-Correlation-Clustering
+# robust-active-clustering
