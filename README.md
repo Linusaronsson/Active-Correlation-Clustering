@@ -36,7 +36,7 @@ pip install -r .
 
 # Running experiments
 
-1. See [this](https://github.com/Linusaronsson/Active-Correlation-Clustering/blob/main/notebooks/datasets.ipynb) notebook for details about how datasets were preprocessed.
+1. See [this](https://github.com/Linusaronsson/Active-Correlation-Clustering/blob/main/notebooks/datasets.ipynb) notebook for details about how datasets were preprocessed. No need to run this code as all datasets have already been generated [here](https://github.com/Linusaronsson/Active-Correlation-Clustering/tree/main/datasets).
 2. See [this](https://github.com/Linusaronsson/Active-Correlation-Clustering/blob/main/notebooks/experiments.ipynb) notebook for details about how to run experiments and generate plots.
 
 # Acknowledgements
