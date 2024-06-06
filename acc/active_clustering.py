@@ -296,8 +296,8 @@ class ActiveClustering:
 
     def construct_initial_sim_matrix(self):
         if self.acq_fn in ["QECC", "COBRAS", "nCOBRAS"]:
-            self.sim_init_type == "random_clustering"
-        
+            self.sim_init_type = "random_clustering"
+
         if self.sim_init_type == "zeros":
             self.pairwise_similarities = np.zeros((self.N, self.N))
             self.num_clusters = 1
