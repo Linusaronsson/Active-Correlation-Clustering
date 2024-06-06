@@ -16,7 +16,7 @@
     "beta": 1,
     "tau": 3,
     "num_maxmin_edges": -1,
-    "dataset_name": "20newsgroups",
+    "dataset_name": "mushrooms",
     "dataset_n_samples": 500,
     "dataset_n_clusters": 10,
     "dataset_class_balance": null,
