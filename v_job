@@ -2,7 +2,7 @@
 #SBATCH -A C3SE2024-1-17
 #SBATCH -C "ICELAKE|SKYLAKE"
 #SBATCH -n 8
-#SBATCH -t 4:00:00
+#SBATCH -t 12:00:00
 
 #Here you should typically call your GPU-hungry application
 module load virtualenv/20.23.1-GCCcore-12.3.0 matplotlib/3.7.2-gfbf-2023a SciPy-bundle/2023.07-gfbf-2023a h5py/3.9.0-foss-2023a

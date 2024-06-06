@@ -269,7 +269,7 @@ class ExperimentReader:
                     err_kws = {}
 
                 errorbar = ("sd", 1)
-                cut_threshold = 500
+                cut_threshold = 400
                 df_filtered = df_filtered[df_filtered["x"] < cut_threshold]
                 #df_filtered = df_filtered[df_filtered["x"] < (min_length + 5)]
 

@@ -11,7 +11,7 @@
     "K_init": 10,
     "sim_init": 0.1,
     "sim_init_type": "random_clustering",
-    "acq_fn": "maxmin",
+    "acq_fn": "QECC",
     "eps": 0.3,
     "beta": 1,
     "tau": 3,
