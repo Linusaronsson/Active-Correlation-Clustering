@@ -23,9 +23,9 @@ This repository contains code for the paper: [Correlation Clustering with Active
 4. Install cloned repositories
 ```
 cd Active-Correlation-Clustering
-pip install -r .
+pip install -e .
 cd noise_robust_cobras
-pip install -r .
+pip install -e .
 ```
 
 5. Install other packages
