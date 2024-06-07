@@ -290,9 +290,9 @@ class ExperimentReader:
                 ax = sns.lineplot(
                     x="x",
                     y="y",
-                    hue=df_filtered[hues].apply(tuple, axis=1),
-                    #hue="acq_fn",
-                    #hue_order=[],
+                    #hue=df_filtered[hues].apply(tuple, axis=1),
+                    hue="acq_fn",
+                    hue_order=["maxexp", "maxmin", "uncert", "freq", "unif", "nCOBRAS", "COBRAS", "QECC"],
                     errorbar=errorbar,
                     marker=".",
                     err_style=err_style,
@@ -333,6 +333,16 @@ class ExperimentReader:
                 #ax.legend(loc="best")
                 ax.legend(loc='upper left', bbox_to_anchor=(1,1))
                 plt.subplots_adjust(right=0.75)
+
+                legs = ax.get_legend().get_texts()
+                fix_legends = True
+                if fix_legends:
+                    ax.get_legend().set_title(None)
+                    for ll in legs:
+                        l = ll.get_text()
+                        for k, v in acq_fn_map.items():
+                            if k in l:
+                                ll.set_text(v)
 
                 plt.savefig(file_path, dpi=150, bbox_inches='tight')
                 plt.clf()
