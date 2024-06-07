@@ -2,6 +2,7 @@ experiment_results_local/
 plots/
 plots_saved/
 plots*/
+v_job
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
